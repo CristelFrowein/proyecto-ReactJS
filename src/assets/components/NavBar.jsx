@@ -17,7 +17,7 @@ const NavBar = () => {
       height: '100px' 
       }}
     >
-      <img src={logo} alt="Logo de la tienda" style={{ height: '5rem', padding: '1rem' }} className='logo' />
+      <img src={logo} alt="logo de la tienda" style={{ height: '5rem', padding: '1rem' }} className='logo' />
       
       <div style={{ display: 'flex', justifyContent: 'space-between'}}>
         <a href='index.html' style={{ margin: '0 15px', color: 'black', textDecoration: 'none' }}>Jarras</a>
