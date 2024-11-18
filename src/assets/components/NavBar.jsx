@@ -1,29 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  
 import CartWidget from './CartWidget';
 import logo from '../img/logo.jpg';
 
 
-
 const NavBar = () => {
   return (
-    <nav style=
-     {{ 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center', 
-      padding: '10px',
-      background: '#ebddcf',
-      width: '100%', 
-      height: '100px' 
-      }}
-    >
-      <img src={logo} alt="logo de la tienda" style={{ height: '5rem', padding: '1rem' }} className='logo' />
+    <nav>
+       <Link to='/'>
+       <img src={logo} alt="logo de la tienda" className="logo" />
+       </Link>
       
-      <div style={{ display: 'flex', justifyContent: 'space-between'}}>
-        <a href='index.html' style={{ margin: '0 15px', color: 'black', textDecoration: 'none' }}>Jarras</a>
-        <a href='index.html' style={{ margin: '0 15px', color: 'black', textDecoration: 'none' }}>Vasos</a>
-        <a href='index.html' style={{ margin: '0 15px',  color: 'black', textDecoration: 'none' }}>Tazas</a>
-        <a href='index.html' style={{ margin: '0 15px',  color: 'black', textDecoration: 'none' }}>Platos</a>
+      <div>
+        <ul className="nav-links">
+          <li><Link to="/category/electronics">Electrónica</Link></li>
+          <li><Link to="/category/jewelery">Joyería</Link></li>
+          <li><Link to="/category/men's clothing">Ropa para hombres</Link></li>
+          <li><Link to="/category/women's clothing">Ropa para mujeres</Link></li>
+        </ul>
       </div>
       <CartWidget />
     </nav>
@@ -31,4 +25,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

@@ -11,23 +11,169 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 nav {
-  max-width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ebddcf;
+  max-width: 100%;
 }
 
+nav div {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links ul{
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+}
+.nav-links li {
+  display: inline-block; 
+  margin-right: 15px; 
+}
+.nav-links a {
+  text-decoration: none; 
+  color: #333; 
 
+}
+
+.nav-links a:hover {
+  color: #007bff; 
+}
 .logo {
   transition: transform 0.3s ease, filter 0.3s ease;
-
+  height: 5rem;
+  padding: 1rem;
 }
 
 .logo:hover {
   transform: scale(1.2);
-  
+}
+
+.item-list-container {
+  padding: 2rem;
+}
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.producto-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.producto-card span {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cart-widget {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-widget span {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: beige;
+  border-radius: 50%;
+  color: black;
+  padding: 2px 6px;
+  font-size: 12px;
 }
 
 
+.carrito {
+  width: 500px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.carrito p {
+  background-color: white;
+  width: 50%;
+  border-radius: 5%;
+  text-align: center;
+  color: black;
+}
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1px;
+  border-radius: 2rem;
+  background-color: transparent;
+  color: black;
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+.product-detail {
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-between;
+  align-items: center;
+}
 
+.product-detail h2 {
+  color: black;
+  text-align: center;
+
+}
+.product-detail p {
+  color: black;
+  text-align: center;
+
+}
+.product-detail span {
+  color: black;
+  text-align: center;
+
+}
+
+.product-detail img {
+  width: 25%;
+}
