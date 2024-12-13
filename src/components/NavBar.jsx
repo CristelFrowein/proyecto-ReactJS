@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  
 import CartWidget from './CartWidget';
-import logo from '../img/logo.jpg';
+import logo from '../assets/img/logo.jpg';
 
 
 const NavBar = () => {
@@ -13,10 +13,10 @@ const NavBar = () => {
       
       <div>
         <ul className="nav-links">
-          <li><Link to="/category/electronics">Electrónica</Link></li>
-          <li><Link to="/category/jewelery">Joyería</Link></li>
-          <li><Link to="/category/men's clothing">Ropa para hombres</Link></li>
-          <li><Link to="/category/women's clothing">Ropa para mujeres</Link></li>
+          <li><Link to="/category/ceramica">Cerámica</Link></li>
+          <li><Link to="/category/vidrio">Vidrio</Link></li>
+          <li><Link to="/category/porcelana">Porcelana</Link></li>
+          <li><Link to="/category/cristal">Cristal</Link></li>
         </ul>
       </div>
       <CartWidget />
