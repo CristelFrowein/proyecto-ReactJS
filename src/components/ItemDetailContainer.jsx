@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDetail } from '../../firebase/db';
+import { getDetail } from '../firebase/db';
 import ItemDetail from './ItemDetail';
 
 function ItemDetailContainer() {

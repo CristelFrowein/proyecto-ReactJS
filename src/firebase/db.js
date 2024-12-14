@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs, query, where, getDoc, addDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where, getDoc, addDoc, doc } from "firebase/firestore";
 import { app } from './config';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';  
@@ -53,3 +53,4 @@ export const createOrder = async (order) => {
         console.error("Error adding document: ", e); 
     } 
 }
+

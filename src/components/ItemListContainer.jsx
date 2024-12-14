@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { PacmanLoader } from 'react-spinners'
-import { getFilterProducts, getProducts } from '../firebase/db'
 import ItemList from './ItemList'
+import { getFilterProducts, getProducts } from '../firebase/db'
+
 
 function ItemListContainer() {
     const [items, setItems] = useState([])
