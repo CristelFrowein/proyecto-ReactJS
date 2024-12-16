@@ -27,15 +27,24 @@ function OrderForm() {
         createOrder(order);
     };
 
+   
+    const isCartEmpty = cart.length === 0;
+
     return (
         <Container className="d-flex justify-content-center align-items-center min-vh-100">
             <Row className="w-100">
                 <Col xs={12} sm={10} md={8} lg={6} className="mx-auto">
-                    <div className="bg-light p-4 rounded shadow-lg">
-                        <h2 className="text-center mb-4">Complete Your Order</h2>
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
+                    <div className="orderForm">
+                        <h2>Completá tu pedido</h2>
+                        
+                       
+                        {isCartEmpty ? (
+                            <p className="text-center text-danger">No hay productos en el carrito para completar el pedido.</p>
+                        ) : null}
+
+                        <Form className='formGroup' onSubmit={handleSubmit}>
+                            <Form.Group className="mb-5" controlId="formBasicEmail">
+                                <Form.Label>Email address: </Form.Label>
                                 <Form.Control
                                     type="email"
                                     placeholder="Enter email"
@@ -45,7 +54,7 @@ function OrderForm() {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicName">
-                                <Form.Label>Name</Form.Label>
+                                <Form.Label>Name: </Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Full Name"
@@ -55,7 +64,7 @@ function OrderForm() {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPhone">
-                                <Form.Label>Phone</Form.Label>
+                                <Form.Label>Phone: </Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Phone number"
@@ -64,9 +73,14 @@ function OrderForm() {
                                 />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit" className="btn-lg w-50 mx-auto d-block">
-                              Submit Order
-                             </Button>
+                            
+                            <Button
+                                type="submit"
+                                className="btn-lg w-50 mx-auto d-block"
+                                disabled={isCartEmpty} 
+                            >
+                                Enviar
+                            </Button>
                         </Form>
                     </div>
                 </Col>
@@ -76,3 +90,4 @@ function OrderForm() {
 }
 
 export default OrderForm;
+

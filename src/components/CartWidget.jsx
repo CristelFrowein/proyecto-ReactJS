@@ -8,8 +8,11 @@ const CartWidget = () => {
 
   return (
     <Link to="/cart" className="cart-widget">
+      <button>
       <i className="bi bi-cart" style={{ fontSize: '24px' }}></i>
       {getQuantity()} 
+      </button>
+      
     </Link>
   );
 };

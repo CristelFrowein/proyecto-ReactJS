@@ -26,23 +26,26 @@ nav div {
   display: flex;
   justify-content: space-between;
 }
-.nav-links ul{
-  list-style-type: none; 
-  padding: 0; 
+.nav-links ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 .nav-links li {
-  display: inline-block; 
-  margin-right: 15px; 
+  display: inline-block;
+  margin-right: 15px;
 }
 .nav-links a {
-  text-decoration: none; 
-  color: #333; 
-
+  text-decoration: none;
+  color: #333;
 }
 
 .nav-links a:hover {
-  color: #007bff; 
+  color: black;
+}
+
+button {
+  cursor: pointer;
 }
 .logo {
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -56,16 +59,16 @@ nav div {
 
 .cardItemsContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 3rem; 
-  padding: 20px; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 20px;
 }
 
 .cardItem {
   width: 100%;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 10px;
 }
@@ -73,16 +76,18 @@ nav div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .cardItem img {
-  width: 100%;  
-  max-width: 100%; 
- align-items: center;
+  width: 500px;
+  max-width: 100%;
+  align-items: center;
 }
 
-.cardItem  h2, p, span {
+.cardItem h2,
+p,
+span {
   color: black;
   text-align: center;
 }
@@ -90,7 +95,6 @@ nav div {
 .cardItem span {
   font-weight: bold;
 }
-
 
 .botones {
   width: 25rem;
@@ -101,17 +105,32 @@ nav div {
   gap: 1rem;
   padding: 1rem;
 }
-
-.cardDetail {
+.botones div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.cardDetail {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .cardDetail img {
-  width: 50%;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .cardDetail h2 {
@@ -119,9 +138,64 @@ nav div {
   color: black;
 }
 
-.cart {
+.cartContainer {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.cartCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 2rem;
+}
+.cart img {
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.totalCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderForm {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  width: 100%;
+  background-color: #ebddcf;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
