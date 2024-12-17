@@ -22,27 +22,40 @@ nav {
   max-width: 100%;
 }
 
-nav div {
+
+/* Estilos para los enlaces de navegación */
+
+.nav-links {
   display: flex;
-  justify-content: space-between;
-}
-.nav-links ul {
+  gap: 20px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
-}
-.nav-links li {
-  display: inline-block;
-  margin-right: 15px;
-}
-.nav-links a {
-  text-decoration: none;
-  color: #333;
 }
 
-.nav-links a:hover {
-  color: black;
+.nav-links li {
+  position: relative;
 }
+
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+
+.active-link {
+  color: #f0a500;  
+  font-weight: bold;
+  border-bottom: 2px solid #f0a500; 
+}
+
 
 button {
   cursor: pointer;

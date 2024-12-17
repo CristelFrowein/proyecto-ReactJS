@@ -1,22 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  
+import { NavLink } from 'react-router-dom';  
 import CartWidget from './CartWidget';
 import logo from '../assets/img/logo.jpg';
-
 
 const NavBar = () => {
   return (
     <nav>
-       <Link to='/'>
-       <img src={logo} alt="logo de la tienda" className="logo" />
-       </Link>
+      <NavLink to='/'>
+        <img src={logo} alt="logo de la tienda" className="logo" />
+      </NavLink>
       
       <div>
         <ul className="nav-links">
-          <li><Link to="/category/ceramica">Cerámica</Link></li>
-          <li><Link to="/category/vidrio">Vidrio</Link></li>
-          <li><Link to="/category/porcelana">Porcelana</Link></li>
-          <li><Link to="/category/cristal">Cristal</Link></li>
+          <li>
+            <NavLink 
+              to="/category/ceramica" 
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Cerámica
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/category/vidrio" 
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Vidrio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/category/porcelana" 
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Porcelana
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/category/cristal" 
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Cristal
+            </NavLink>
+          </li>
         </ul>
       </div>
       <CartWidget />
@@ -25,3 +52,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
